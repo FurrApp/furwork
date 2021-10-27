@@ -1,0 +1,12 @@
+{
+	"name" : "Furwork",
+	"description" : "A simple Framework for Furries (or Everyone).",
+	"short_name" : "FW",
+	"start_url" : "https://furrapp.com/",
+	"author" : "FurrApp",
+	"lang" : "en-US",
+	"dir" : "ltr",
+	"orientation" : "any",
+	"display" : "standalone",
+	"background-color" : "#fff"
+}
