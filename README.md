@@ -36,3 +36,8 @@ This is a little framework of [FurrApp Project](https://furrapp.com/)
 	- Config all requests
 - index.php
 	- Load all.
+
+---
+## Important 
+- *Edit the ``.htaccess`` file in ``/public/`` folder*
+- 
