@@ -7,6 +7,8 @@
 	define('APP_URL', 'HERE YOUR URL');
 	// Your APP Name
 	define('APP_NAME', 'HERE YOUR APP NAME');
+	// controller default
+	define('APP_DEFAULT_CONTROLLER', 'pages');
 	// The mode of work
 	define('APP_MODE', 'production'); // MODE 
 	
