@@ -7,16 +7,19 @@
 
 class Core{
 	// Using default view
-	protected $actualController = 'pages';
+	protected $actualController = APP_DEFAULT_CONTROLLER;
 	protected $actualMethod = 'index';
 	protected $params = [];
 
 	public function __construct(){
 		$url = $this->getURL();
-		// Check if existe the controller
-		if (file_exists('../app/controllers/' . @ucwords($url[0]) . '.php')) {
+		// Check if exist the controller
+		if (file_exists('app/controllers/' . @ucwords($url[0]) . '.php')) {
 			$this->actualController = ucwords($url[0]);
 			// Recicle var 
+			unset($url[0]);
+		}elseif(empty($url[0])){
+			$this->actualController = ucwords(APP_DEFAULT_CONTROLLER);
 			unset($url[0]);
 		}elseif(!empty($url[0]) && !file_exists('../app/controllers/' . @ucwords($url[0]) . '.php')) {
 			if (APP_MODE == 'dev') {
@@ -28,7 +31,7 @@ class Core{
 			}
 		}
 		// Call the controller
-		require_once "../app/controllers/" . $this->actualController . '.php';
+		require_once "../app/controllers/" . ucwords($this->actualController) . '.php';
 		$this->actualController = new $this->actualController;
 
 		// Check the Method
