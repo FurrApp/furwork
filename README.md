@@ -40,4 +40,8 @@ This is a little framework of [FurrApp Project](https://furrapp.com/)
 ---
 ## Important 
 - *Edit the ``.htaccess`` file in ``/public/`` folder*
-- 
+
+--- 
+## Next updates 
+- Add Routes function.
+- Add templates function. 
